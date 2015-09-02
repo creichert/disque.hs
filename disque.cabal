@@ -1,0 +1,53 @@
+name:                disque
+version:             0.1.0.0
+synopsis:            Haskell Client for Disque Job Queye
+description:         Haskell Client for Disque Job Queue
+homepage:            http://github.com/creichert/disque
+license:             BSD3
+license-file:        LICENSE
+author:              Christopher Reichert <creichert07@gmail.com>
+maintainer:          Christopher Reichert <creichert07@gmail.com>
+copyright:           (c) 2015 Christopher Reichert
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Database.Disque
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , text
+                     , transformers
+                     , aeson
+                     , hedis
+
+executable disque.hs
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  build-depends:       base
+                     , bytestring
+                     , haskeline
+                     , disque
+                     , transformers
+
+test-suite spec
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  main-is:             Spec.hs
+  build-depends:       base
+                     , bytestring
+                     , text
+                     , disque
+                     , hspec
+                     , HUnit
+                     , QuickCheck
+
+source-repository head
+  type:     git
+  location: https://github.com/creichert/disque
