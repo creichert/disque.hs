@@ -1,0 +1,7 @@
+
+resolver: lts-3.2
+flags: {}
+packages:
+  - '.'
+extra-deps:
+  - hedis-0.6.9
