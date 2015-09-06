@@ -1,7 +1,7 @@
 
 # Disque client for Haskell
 
-[disque][https://github.com/antirez/disque] is a distributed, in
+[Disque](https://github.com/antirez/disque) is a distributed, in
 memory, message broker.
 
 **NOTE: most of the functionality in this package relies on running a
