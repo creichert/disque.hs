@@ -1,5 +1,8 @@
 
-# Disque (https://github.com/antirez/disque) client for Haskell
+# Disque client for Haskell
+
+[disque][https://github.com/antirez/disque] is a distributed, in
+memory, message broker.
 
 ## Getting Started
 
