@@ -10,10 +10,6 @@ main :: IO ()
 main = do
   conn <- connect disqueConnectInfo
   runDisque conn $ do
-    let queue   = "test_queue"
-        data_   = "{ \"foo\": \"bar\" }"
-        timeout = 0
-    res <- addjob queue data_ timeout
-    liftIO (print ("ADDJOB response " ++ (show res)))
-    j <- getjob [queue]
-    liftIO (print ("GETJOB response: " ++ show j))
+    let timeout = 0
+    addjob "test_queue" "test data" timeout >>= liftIO . print
+    getjob ["test_queue"] >>= liftIO . print
