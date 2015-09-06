@@ -1,6 +1,6 @@
 name:                disque
 version:             0.1.0.0
-synopsis:            Haskell Client for Disque Job Queye
+synopsis:            Haskell Client for Disque Job Queue
 description:         Haskell Client for Disque Job Queue
 homepage:            http://github.com/creichert/disque
 license:             BSD3
