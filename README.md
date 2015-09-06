@@ -4,12 +4,20 @@
 [disque][https://github.com/antirez/disque] is a distributed, in
 memory, message broker.
 
-## Getting Started
+**NOTE: most of the functionality in this package relies on running a
+  disque-server process**
 
-Run the command line client to get a feel for Disque:
+## Quick Start
+
+The example script is setup to run on invocation:
+
+	./example.hs
+
+To build the project, simply run:
 
     stack build
-	stack exec disque.hs
+
+## Example
 
 Integrate `disque.hs` into your code:
 
@@ -32,3 +40,12 @@ Integrate `disque.hs` into your code:
 
 
 Some commands are not implemented in the test command-line client.
+
+
+## Command-line client
+
+This project contains a minimal
+Run the command line client to get a feel for Disque:
+
+    stack build
+	stack exec disque.hs
